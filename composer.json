@@ -1,0 +1,15 @@
+{
+    "name": "nfc-contact-card/leon",
+    "description": "Cards used to store contact details using NFC technology",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Riik Shetty",
+            "email": "2022.ritik.shetty@ves.ac.in"
+        }
+    ],
+    "require": {
+        "sabre/vobject": "^4.5"
+    }
+}
