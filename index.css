@@ -291,7 +291,49 @@ small{
     margin: 0 0 35px 0;
 }
 .main .container .contactForm .formBox .inputBox.w50{
+    position: absolute;
     width: 47%;
+}
+.upper-text {
+    position: absolute;
+    top: -30%; 
+    left: 2%; 
+    background-color: #fff;
+    color: #333;
+    height: 20px; 
+    width: 150px;
+    transition: color 0.3s ease;
+}
+.inputBox {
+position: relative;
+padding-bottom: 20px;
+margin: 0 0 35px 0;
+width: 100%;
+}
+.inputBox input,
+.inputBox textarea {
+    width: calc(100% - 10px); /* Adjust the width as needed */
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #300;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+
+.inputBox textarea {
+    min-height: 120px;
+}
+.body-wrap {
+    overflow-y: auto; /* Add scrollbar to the y-axis */
+}
+
+.main {
+    overflow: hidden; /* Hide overflowing content */
+}
+.inputBox.w50 input:focus + .upper-text, .inputBox.w50 input:valid + .upper-text {
+    color: #00c3ff;
 }
 .main .container .contactForm .formBox .inputBox.w100{
     width: 100%;

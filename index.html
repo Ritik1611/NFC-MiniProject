@@ -1,128 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidde:A new creater</title>
-    <link rel="stylesheet" href="index.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<body>
-    <header id="header">
-      <a href="#" class="logo" style="font-style: italic;">hidde</a>
-       <nav class="navbar">
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">ConactUs</a>
-        <a href="#">Media</a>
-        <a href="#">QR-COde</a>
-       </nav>
-    </header>
-    <section class="home">
-        <div class="home-image">
-            <img src="WhatsApp_Image_2023-08-15_at_1.23.14_PM-removebg-preview - Copy.png" alt="img">
-       </div>
-          <div class="home-content">
-             <h1>Hi, I'm  <small>YASH SAJDA</small></h1>
-                <h3>Procurement Manager</h3>
-                <p>Responsibities for overseeing the process of accquiring goods and services primary Role is to ensure 
-                    the company obtain the necessary materials products or services at the best possible price </p>
-          
-                <div class="home-sci">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                </div>
-                <a href="#" class="btn">SAVE CONTACT</a>
-                </div>
-            
-    </section>
-    <div class="dec">
-    <div class="main">
-    <div class="container">
-        <div class="contactinfo">
-            <div>
-                <h2>CONTACT INFO</h2>
-                <ul class="info">
-                <li>
-                    <span><img src="location-removebg-preview.png" alt="image"></span>
-                    <span>Collector's Colony Chembur<br>
-                        vesit,mumbai<br>40012</span>
-                </li>
-                
-                <li>
-                    <span><img src="mail-removebg-preview.png" alt="img"></span>
-                    <span>2022.yash.sajda@ves.ac.in</span>
-                </li>
-                <li>
-                    <span><img src="call-removebg-preview.png" alt="img"></span>
-                    <span>86573 79424</span>
-                </li>
-            </ul>
-            </div>
-                <ul class="sci">
-                    <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                    <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
-                </ul>
-        </div>
-        <div class="contactForm">
-            <h2>Send a Message</h2>
-            <div class="formBox">
-                <div class="inputBox w50">
-                 <input type="text" name="" id="" required>
-                 <span>First Name</span>
-                </div>
-                <div class="inputBox w50">
-                    <input type="text" name="" id="" required>
-                    <span>Last Name</span>
-                   </div>
-                   <div class="inputBox w50">
-                    <input type="text" name="" id="" required>
-                    <span>Email Name</span>
-                   </div><div class="inputBox w50">
-                    <input type="text" name="" id="" required>
-                    <span>Mobile Name</span>
-                   </div><div class="inputBox w100">
-                   <textarea  name =""required></textarea>
-                   <span>Write Your Message Here...</span>
-                   </div>
-                </div><div class="inputBox w100">
-                  <a href="#" class="button">Send</a>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bureau Of Small Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background-color: var(--color-primary-dark); white-space: nowrap; height:60px; cursor: pointer;">
+			<div class="logo" style="font-size: 30px; color: #000; font-weight: bold;">NfCafe</div>
+		
+			<nav>
+				<ul style="margin-top:25px; display: flex; align-items: center;">
+					<li style="list-style: none;">
+						<a href="#features-extended section" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Features</a>
+					</li>
+					<li style="list-style: none;">
+						<a href="#site-footer" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Team</a>
+					</li>
+					<li style="list-style: none;">
+						<a href="#site-footer-bottom" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">contact</a>
+					</li>
+					<li style="list-style: none;">
+						<a href="review.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Review</a>
+					</li>
+				</ul>
+			</nav>
+		
+			<div class="button" style="margin-bottom:20px">
+				<a href="login.html" class="btn" style="font-size: 15px; color: var(--color-white); text-decoration: none; text-transform: capitalize; padding: 10px 20px; border-radius: 10vh; transition: all .2s ease; border: 2px solid var(--color-primary);">Login/Sign up</a>
+			</div>
+		</header>
+		 <main>
+            <section class="hero text-center text-light">
+				<div class="hero-bg"></div>
+				<div class="hero-particles-container">
+					<canvas id="hero-particles"></canvas>
+				</div>
+                <div class="container-sm">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Bureau Of Small Projects</h1>
+	                        <p class="hero-paragraph">BOSP is a dynamic and innovative company that specializes in providing comprehensive solutions in social media management, web development, and the sale of digital products. Founded in 2021, the company has quickly established itself as a leader in the digital marketing and web development industry. With a team of skilled professionals and a commitment to delivering exceptional results, BOSP helps businesses of all sizes enhance their online presence and boost their digital marketing efforts.results forever.</p>
+	                        <div class="hero-cta">
+								<a class="button button-primary button-wide-mobile" href="#">Start Your Digital Journey Today</a>
+							</div>
+						</div>
+						<div class="mockup-container">
+							<div class="mockup-bg">
+								<img src="dist/images/iphone-hero-bg.svg" alt="iPhone illustration">
+							</div>
+							<img class="device-mockup" src="dist/images/iphone-hero.png" alt="iPhone Hero">
+						</div>
                     </div>
-            </div>
-        </div>
+                </div>
+            </section>
+
+			<section id="features-extended section" class="features-extended section">
+                <div class="features-extended-inner section-inner">
+					<div class="features-extended-wrap">
+						<div class="container">
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-01.svg" alt="iPhone Feature 01 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-01.png" alt="iPhone Feature 01">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Social Media Management:</h3>
+									<p class="m-0">- Social Media Strategy: Developing tailored social media strategies to meet client goals.
+										- Content Creation: Crafting engaging and shareable content across various social platforms.
+										- Community Engagement: Interacting with followers, responding to inquiries, and fostering a loyal online community.
+										- Analytics and Reporting: Measuring the impact of social media campaigns and providing data-driven insights.
+									 
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-02.svg" alt="iPhone Feature 02 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-02.png" alt="iPhone Feature 02">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Web Development:</h3>
+									<p class="m-0">- Custom Website Design: Creating visually appealing, responsive, and user-friendly websites.
+										- E-Commerce Development: Building robust online stores with secure payment gateways.
+										- Content Management Systems (CMS): Implementing CMS like WordPress for easy content updates.
+										- SEO Optimization: Enhancing website visibility on search engines for improved organic traffic.
+										morbi quis commodo odio aenean sed adipiscing diam donec.</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-03.svg" alt="iPhone Feature 03 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-03.png" alt="iPhone Feature 03">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Sale of Products:</h3>
+									<p class="m-0">- Digital Products: Offering a range of digital products, such as 
+									 Smart business (Cards, Bands, Rings, Tags).
+										- E-Commerce Solutions: Assisting clients in setting up and optimizing their online stores.
+										- Product Marketing: Developing strategies to promote and sell digital products effectively.
+									 
+									 adipiscing diam donec.</p>
+								</div>
+							</div>
+							<div class="feature-extended">
+								<div class="feature-extended-image">
+									<div class="mockup-bg">
+										<img src="dist/images/iphone-feature-bg-04.svg" alt="iPhone Feature 04 illustration">
+									</div>
+									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-04.png" alt="iPhone Feature 04">
+								</div>
+								<div class="feature-extended-body is-revealing">
+									<h3 class="mt-0 mb-16">Customized Printing</h3>
+									<p class="m-0">Exciting news! In addition to our existing services, we are now proud to offer Customized Printing solutions. We can help you bring your unique design ideas to life on a wide range of products, from apparel to promotional items. Our commitment to quality and attention to detail ensures that each customized print is a work of art.
+										aenean sed adipiscing diam donec.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+            </section>
+        </main>
+
+		<footer id="site-footer"class="site-footer">
+			<div class="footer-particles-container">
+				<canvas id="footer-particles"></canvas>
+			</div>
+			<div class="site-footer-top">
+				<section class="cta section text-light">
+					<div class="container-sm">
+						<div class="cta-inner section-inner">
+							<div class="cta-header text-center">
+								<h2 class="section-title mt-0">🌟 We're Expanding Our Team 🌟</h2>
+								<p class="section-paragraph">Bureau Of Small Projects is on the lookout for talented individuals to join our dynamic team. If you're passionate about technology, innovation, and making a real impact in the fields of engineering, startup & economical growth, SEO Management, customized printing, we want to hear from you.
+									Join us in our journey to push the boundaries of what's possible, create memorable experiences, and contribute to our continued success. Send your resume and a brief introduction to Us.<br>Let's innovate together!
+									</p>
+								<div class="cta-cta">
+									<a class="button button-primary button-wide-mobile" href="https://www.linkedin.com/in/yashkumar-sajda-852a2828a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Join Us Today</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div id="site-footer-bottom"class="site-footer-bottom">
+				<div class="container">
+					<div class="site-footer-inner">
+						<div class="brand footer-brand">
+							<a href="#">
+								<img src="dist/images/logo.svg" alt="Bureau Of Small Projects">
+							</a>
+						</div>
+						<ul class="footer-links list-reset">
+							<li>
+								<a href="#">Contact</a>
+							</li>
+							<li>
+								<a href="#">About us</a>
+							</li>
+							<li>
+								<a href="#">FAQ's</a>
+							</li>
+							<li>
+								<a href="#">Support</a>
+							</li>
+						</ul>
+						<ul class="footer-social-links list-reset">
+							<li>
+								<a href="https://www.facebook.com/profile.php?id=100087213191552">
+									<span class="screen-reader-text">Facebook</span>
+									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFF"/>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/the_BOSP">
+									<span class="screen-reader-text">Twitter</span>
+									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFF"/>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="screen-reader-text">Google</span>
+									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#FFF"/>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<div class="footer-copyright">&copy; 2021 Bureau Of Small Projects all rights reserved<br>
+							Developed By Kanishq Sajda <br> Class 11G Roll no.671
+						</div>
+						
+					</div>
+				</div>
+			</div>
+        </footer>
     </div>
-</div>
+
+    <script src="dist/js/main.min.js"></script>
 </body>
-<script>
-         var lastScrollTop=0;
-         header = document.getElementById("header");
-         window.addEventListener('scroll',function(){
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if(scrollTop > lastScrollTop){
-                header.style.top = "-70px";
-            }
-            else{
-                header.style.top ="0";
-            }
-            lastScrollTop = scrollTop;
-         }
-         )
-
-
-    var preScrollpos = window.pageYOffset;
-    window.onscroll = function(){
-        var currentScrollpos = window.pageYOffset;
-        if(preScrollpos > currentScrollpos){
-            document.getElementsById("header").style.display = "none";
-        }
-        else{
-
-            document.getElementsById("header").style.display = "block";
-        }
-        preScrollpos = currentScrollpos;
-    }
-</script>
 </html>
