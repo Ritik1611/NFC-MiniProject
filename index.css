@@ -194,7 +194,9 @@ small{
     z-index: 80;
     overflow: hidden;
     margin-left: 60px;
-    padding: 40px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -262,7 +264,7 @@ small{
 }
 .main .container .contactForm{
     position: absolute;
-    padding: 70px 50px;
+    padding: 0px 50px;
     background: #fdfcfc;
     margin-left: 260px;
     padding-left: 250px;
@@ -272,12 +274,29 @@ small{
     align-items: center;
     box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
     z-index: 1;
-    overflow: hidden;
+    overflow-y: auto;
 }
 .main .container .contactForm h2{
     color: #0f3959;
     font-style: 24px;
     font-weight: 500;
+}
+.rating-container {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.star {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.star:hover,
+.star.checked {
+    color: #ffcc00;
 }
 .main .container .contactForm .formBox{
     position: relative;
@@ -297,7 +316,17 @@ small{
 .upper-text {
     position: absolute;
     top: -30%; 
-    left: 2%; 
+    left: 0%; 
+    background-color: #fff;
+    color: #333;
+    height: 20px; 
+    width: 150px;
+    transition: color 0.3s ease;
+}
+.upper-text-rating {
+    position: relative;
+    top: -30%; 
+    left: 0%;
     background-color: #fff;
     color: #333;
     height: 20px; 
@@ -337,6 +366,9 @@ width: 100%;
 }
 .main .container .contactForm .formBox .inputBox.w100{
     width: 100%;
+}
+.inputBox.w100 input:focus + .upper-text, .inputBox.w50 input:valid + .upper-text {
+    color: #00c3ff;
 }
 .main .container .contactForm .formBox .inputBox input,
 .main .container .contactForm .formBox .inputBox textarea
@@ -380,7 +412,7 @@ width: 100%;
     position: relative;
     cursor: pointer;
     background: #0f3959;
-    color: #fff;
+    color: #fdfcfc;
     border: none;
     min-width: 150px;
     padding: 15px;

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFC Digital Contact Card</title>
+  <!--link rel="stylesheet" href="dist/css/style.css"-->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="new.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+  <style>
+    /* Styles for elements with is-boxed class */
+.is-boxed {
+  background: #ffffff; /* White background */
+}
+
+/* Styles for elements with has-animations class */
+.has-animations .hero .hero-bg,
+.has-animations .hero::before,
+.has-animations .hero::after,
+.has-animations .hero-particles-container,
+.has-animations .site-header,
+.has-animations .hero-title,
+.has-animations .hero-paragraph,
+.has-animations .hero-cta,
+.has-animations .hero .mockup-bg,
+.has-animations .hero .device-mockup {
+  opacity: 0;
+}
+
+.has-animations.is-loaded .hero .hero-bg {
+  animation: heroBg 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.has-animations.is-loaded .hero::before,
+.has-animations.is-loaded .hero::after {
+  animation: heroFadeIn .6s ease forwards 0.45s;
+}
+
+.has-animations.is-loaded .site-header,
+.has-animations.is-loaded .hero-particles-container,
+.has-animations.is-loaded .hero .mockup-bg {
+  animation: heroFadeIn .6s ease forwards 0.45s;
+}
+
+.has-animations.is-loaded .hero-title {
+  animation: heroContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.15s;
+}
+
+.has-animations.is-loaded .hero-paragraph {
+  animation: heroContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.3s;
+}
+
+.has-animations.is-loaded .hero-cta {
+  animation: heroContent 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 0.45s;
+}
+
+.has-animations.is-loaded .hero .device-mockup {
+  animation: heroMockup .6s ease forwards 0.6s;
+}
+
+@keyframes heroBg {
+  from {
+    transform: scaleY(0) scaleX(1.2) skewY(30deg);
+    opacity: 1;
+  }
+  to {
+    transform: scaleY(1) scaleX(1) skewY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroContent {
+  from {
+    transform: translateY(40px) skewY(2deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) skewY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroMockup {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #7e33c0, #d8f5ff);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container-new {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Added for positioning the button */
+      width: 90%;
+      max-width: 800px;
+      height: 470px;
+      overflow: hidden;
+    }
+
+    .left-side {
+      width: 50%;
+      height: 100%;
+      background-color: #ead7d7;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 50px;
+    }
+
+    .right-side {
+      width: 50%;
+      height: 100%;
+      padding: 20px;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    label {
+      width: 120px;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    select {
+      flex: 1;
+      height: 30px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="file"] {
+      height: auto;
+      padding: 0;
+    }
+
+    input[type="color"] {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .order-button {
+      position: absolute;
+      bottom: 40px;
+      margin-left: 145px;
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .order-button:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+      }
+
+      .left-side,
+      .right-side {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .input-group label {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .order-button {
+        margin-left: 0;
+        margin-top: 20px;
+        position: relative;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="is-boxed has-animations">
+  <div style="max-width:1440px;margin:0 auto;box-shadow:0 20px 48px rgba(22,30,42,0.16)">
+    <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background-color: var(--color-primary-dark); white-space: nowrap; height:60px; cursor: pointer;">
+        <div class="logo" style="font-size: 30px; color: #000; font-weight: bold;">NfCafe</div>
+    
+        <nav>
+            <ul style="margin-top:0px; display: flex; align-items: center;">
+                <li style="list-style: none;">
+                    <a href="land.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Home</a>
+                </li>
+                <li style="list-style: none;">
+                    <a href="#site-footer" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Team</a>
+                </li>
+                <li style="list-style: none;">
+                    <a href="new.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #00c3ff; transition: all .2s ease;">Customization</a>
+                </li>
+                <li style="list-style: none;">
+                    <a href="review.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+</div>
+
+  <div class="container-new">
+    <div class="card">
+      <div class="left-side" id="leftSide">
+        <div class="nfc-card" id="nfcCard">
+          <img src="placeholder-logo.png" alt="Logo" id="logo">
+          <h2 id="name">Name</h2>
+          <img src="placeholder-signature.png" alt="Signature" id="signature" style="max-width: 70%; max-height: 100px;">
+          <p id="email">Email</p>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="input-group">
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" placeholder="Enter Name">
+        </div>
+        <div class="input-group">
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" placeholder="Enter Email"style="font-size:10px;">
+        </div>
+        <div class="input-group">
+          <label for="logoInput">Upload Logo:</label>
+          <input type="file" id="logoInput" accept="image/*">
+        </div>
+        <div class="input-group">
+          <label for="signatureInput">Upload Signature:</label>
+          <input type="file" id="signatureInput" accept="image/*">
+        </div>
+        <div class="input-group">
+          <label for="backgroundColor">Background Color:</label>
+          <input type="color" id="backgroundColor">
+        </div>
+        <div class="input-group">
+          <label for="cardType">Card Type:</label>
+          <select id="cardType">
+            <option value="standard">Standard 5$</option>
+            <option value="premium">Premium 10$</option>
+            <option value="platinum">Platinum 15$</option>
+          </select>
+        </div>
+        <button class="order-button">Order Now</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('nameInput').addEventListener('input', updateCard);
+    document.getElementById('emailInput').addEventListener('input', updateCard);
+    document.getElementById('backgroundColor').addEventListener('input', updateCard);
+    document.getElementById('logoInput').addEventListener('change', updateCard);
+    document.getElementById('signatureInput').addEventListener('change', updateSignature);
+    document.getElementById('cardType').addEventListener('change', updateCard);
+
+    function updateCard() {
+      const name = document.getElementById('nameInput').value || 'Name';
+      const email = document.getElementById('emailInput').value || 'Email';
+      const backgroundColor = document.getElementById('backgroundColor').value;
+      const logoFile = document.getElementById('logoInput').files[0];
+      const signatureFile = document.getElementById('signatureInput').files[0];
+      const logoElement = document.getElementById('logo');
+      const signatureElement = document.getElementById('signature');
+      const nameElement = document.getElementById('name');
+      const emailElement = document.getElementById('email');
+
+      nameElement.textContent = name;
+      emailElement.textContent = email;
+
+      if (logoFile) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          logoElement.src = event.target.result;
+        };
+        reader.readAsDataURL(logoFile);
+      } else {
+        logoElement.src = 'placeholder-logo.png';
+      }
+
+      if (signatureFile) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          signatureElement.src = event.target.result;
+        };
+        reader.readAsDataURL(signatureFile);
+      } else {
+        signatureElement.src = 'placeholder-signature.png';
+      }
+
+      document.getElementById('leftSide').style.backgroundColor = backgroundColor;
+    }
+
+    function updateSignature() {
+      const signatureFile = document.getElementById('signatureInput').files[0];
+      const signatureElement = document.getElementById('signature');
+
+      if (signatureFile) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          signatureElement.src = event.target.result;
+        };
+        reader.readAsDataURL(signatureFile);
+      } else {
+        signatureElement.src = 'placeholder-signature.png';
+      }
+    }
+  </script>
+</body>
+</html>

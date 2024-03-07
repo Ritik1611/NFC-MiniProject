@@ -1,0 +1,101 @@
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    display: flex;
+    width: 90%;
+    max-width: 850px;
+    height: 460px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .left-side {
+    max-width: 250px;
+    height: 100%;
+    background-color: #ead7d7;
+    padding: 50px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    padding-left: 60px;
+  }
+  
+  .right-side {
+    flex: 1;
+    min-width: 440px;
+    height: 100%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group label {
+    width: 120px;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  #backgroundColor{
+    max-width: 40px;
+  }
+  .input-group input,
+  .input-group select {
+    flex: 1;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-group input[type="file"] {
+    height: auto;
+    padding: 0;
+  }
+  
+  .input-group select {
+    appearance: none;
+    background-color: #fff;
+  }
+  
+  .input-group select:focus {
+    outline: none;
+  }
+  
+  #logo {
+    max-width: 300px;
+    max-height: 160px;
+    margin-bottom: 10px;
+  }
+  #signature{
+    align-items: center;
+  }
+  

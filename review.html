@@ -12,23 +12,23 @@
         <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
     </head>
     <body class="is-boxed has-animations">
-        <div class="body-wrap boxed-container">
+        <div class="boxed-container">
             <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background-color: var(--color-primary-dark); white-space: nowrap; height:60px; cursor: pointer;">
                 <div class="logo" style="font-size: 30px; color: #000; font-weight: bold;">NfCafe</div>
             
                 <nav>
                     <ul style="margin-top:25px; display: flex; align-items: center;">
                         <li style="list-style: none;">
-                            <a href="#features-extended section" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Features</a>
+                            <a href="land.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Home</a>
                         </li>
                         <li style="list-style: none;">
                             <a href="#site-footer" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Team</a>
                         </li>
                         <li style="list-style: none;">
-                            <a href="#site-footer-bottom" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">contact</a>
+                            <a href="new.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Customization</a>
                         </li>
                         <li style="list-style: none;">
-                            <a href="review.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #00c3ff; transition: all .2s ease;">Review</a>
+                            <a href="review.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #00c3ff; transition: all .2s ease;">About</a>
                         </li>
                     </ul>
                 </nav>
@@ -66,40 +66,63 @@
                         </ul>
                 </div>
                 <div class="contactForm">
-                    <h2>Send a Message</h2>
+                    <h2 style="padding-bottom: 40px;">Send a Message</h2>
                     <div class="form">
                         <form method="post" action="php_process.php">
                         <div class="inputBox w50">
                          <input type="text" name="firstname" id="firstname" required style="font-size: medium;">
-                         <span class="upper-text" style="font-size: small;">First Name</span>
+                         <span class="upper-text" style="font-size: small;">Name</span>
                         </div>
-                        <div class="inputBox w50">
+                        <!--div class="inputBox w50">
                             <input type="text" name="lastname" id="lastname" required style="font-size: medium;">
                             <span class="upper-text" style="font-size: small;">Last Name</span>
-                           </div>
+                           </div-->
                            <div class="inputBox w50">
                             <input type="text" name="email_address" id="email_address" required style="font-size: medium;">
                             <span class="upper-text" style="font-size: small;">Email</span>
                         </div>
-                           <div class="inputBox w50">
+                           <!--div class="inputBox w50">
                             <input type="text" name="mobile_no" id="mobile_no" required style="font-size: medium;">
                             <span class="upper-text" style="font-size: small;">Mobile Number</span>
-                           </div>
-                           <div class="inputBox w50">
+                           </div-->
+                           <!--div class="inputBox w50">
                             <input type="text" name="organisation" id="organisation" required style="font-size: medium;">
                             <span class="upper-text" style="font-size: small;">Organisation name</span>
-                           </div>
+                           </div-->
+                           <div class="inputBox w50">
+                                <span class="upper-text-rating" style="font-size: small;">Rating:</span>
+                                <span class="star" onclick="setRating(1)">&#9733;</span>
+                                <span class="star" onclick="setRating(2)">&#9733;</span>
+                                <span class="star" onclick="setRating(3)">&#9733;</span>
+                                <span class="star" onclick="setRating(4)">&#9733;</span>
+                                <span class="star" onclick="setRating(5)">&#9733;</span>
+                                <input type="hidden" name="rating" id="rating" value="0">
+                            </div>
                            <div class="inputBox w100">
-                           <textarea  name ="message" id="message" required style="font-size: medium;"></textarea>
-                           <span class="upper-text" style="font-size: small;">Write Your Message Here...</span>
+                           <input type="text" name="email_address" id="email_address" required style="font-size: medium;">
+                           <span class="upper-text" style="font-size: small; width: fit-content;">Write Your Review</span>
                            </div>
                             <div class="inputBox w100">
-                            <a href="#" class="button" style="color: white;">Send</a>
+                            <a href="#" class="button">Send</a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            function setRating(value) {
+                document.getElementById("rating").value = value;
+                const stars = document.querySelectorAll('.star');
+                stars.forEach((star, index) => {
+                    if (index < value) {
+                        star.classList.add('checked');
+                    } else {
+                        star.classList.remove('checked');
+                    }
+                });
+            }
+        </script>
     </body>
 </html>
