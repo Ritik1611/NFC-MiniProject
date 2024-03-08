@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Website</title>
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="is-boxed has-animations">
+    <div class="boxed-container">
+        <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background-color: var(--color-primary-dark); white-space: nowrap; height:60px; cursor: pointer;">
+            <div class="logo" style="font-size: 30px; color: #000; font-weight: bold;">NfCafe</div>
+        
+            <nav>
+                <ul style="margin-top:25px; display: flex; align-items: center;">
+                    <li style="list-style: none;">
+                        <a href="land.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Home</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a href="shop.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #00c3ff; transition: all .2s ease;">Team</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a href="new.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Customization</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a href="review.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section id="card-types">
+            <div class="container-shop">
+                <h2>Select Card Type:</h2>
+                <div class="card-types">
+                    <label class="card-type">
+                        <input type="radio" name="card-type" value="premium" checked>
+                        <span class="checkmark"></span>
+                        Premium
+                    </label>
+                    <label class="card-type">
+                        <input type="radio" name="card-type" value="standard">
+                        <span class="checkmark"></span>
+                        Standard
+                    </label>
+                    <label class="card-type">
+                        <input type="radio" name="card-type" value="platinum">
+                        <span class="checkmark"></span>
+                        Platinum
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section id="products">
+            <div class="container-shop">
+                <!-- Product listing will be generated here dynamically -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container-shop">
+            <p>&copy; 2024 My Shopping Website</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
