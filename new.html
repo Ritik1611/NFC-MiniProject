@@ -278,37 +278,37 @@
           <p id="email">Email</p>
         </div>
       </div>
-      <div class="right-side">
-        <div class="input-group">
-          <label for="nameInput">Name:</label>
-          <input type="text" id="nameInput" placeholder="Enter Name">
+      <form class="right-side" method="post" action="process_form.php" enctype="multipart/form-data">
+          <div class="input-group">
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" name="nameInput" placeholder="Enter Name" required>
         </div>
         <div class="input-group">
-          <label for="emailInput">Email:</label>
-          <input type="email" id="emailInput" placeholder="Enter Email"style="font-size:10px;">
+            <label for="emailInput">Email:</label>
+            <input type="email" id="emailInput" name="emailInput" placeholder="Enter Email" style="font-size: 10px;" required>
         </div>
         <div class="input-group">
-          <label for="logoInput">Upload Logo:</label>
-          <input type="file" id="logoInput" accept="image/*">
+            <label for="logoInput">Upload Logo:</label>
+            <input type="file" id="logoInput" name="logoInput" accept="image/*" required>
         </div>
         <div class="input-group">
-          <label for="signatureInput">Upload Signature:</label>
-          <input type="file" id="signatureInput" accept="image/*">
+            <label for="signatureInput">Upload Signature:</label>
+            <input type="file" id="signatureInput" name="signatureInput" accept="image/*" required>
         </div>
         <div class="input-group">
-          <label for="backgroundColor">Background Color:</label>
-          <input type="color" id="backgroundColor">
+            <label for="backgroundColor">Background Color:</label>
+            <input type="color" id="backgroundColor" name="backgroundColor">
         </div>
         <div class="input-group">
-          <label for="cardType">Card Type:</label>
-          <select id="cardType">
-            <option value="standard">Standard 5$</option>
-            <option value="premium">Premium 10$</option>
-            <option value="platinum">Platinum 15$</option>
-          </select>
-        </div>
+            <label for="cardType">Card Type:</label>
+            <select id="cardType" name="cardType">
+                <option value="standard">Standard 5$</option>
+                <option value="premium">Premium 10$</option>
+                <option value="platinum">Platinum 15$</option>
+            </select>
+        </div>      
         <button class="order-button">Order Now</button>
-      </div>
+      </form>
     </div>
   </div>
   <script>

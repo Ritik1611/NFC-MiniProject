@@ -4,10 +4,10 @@ include("review_connection.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $names = $_POST["names"];
     $email = $_POST["email"];
-    $message = $_POST["message"];
+    $messages = $_POST["messages"];
     $rating = $_POST['rating'];
 
-    $sql = $conn->prepare("INSERT INTO review (names, email, message, rating) VALUES (?, ?, ?, ?)");
+    $sql = $conn->prepare("INSERT INTO review (names, email, messages, rating) VALUES (?, ?, ?, ?)");
     $sql->bind_param("sssi", $names, $email, $message, $rating);
 
         if ($sql->execute()) {
