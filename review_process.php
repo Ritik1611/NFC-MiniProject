@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rating = $_POST['rating'];
 
     $sql = $conn->prepare("INSERT INTO review (names, email, messages, rating) VALUES (?, ?, ?, ?)");
-    $sql->bind_param("sssi", $names, $email, $message, $rating);
+    $sql->bind_param("sssi", $names, $email, $messages, $rating);
 
         if ($sql->execute()) {
             echo '<script>alert("Thankyou for your feedback!");</script>';

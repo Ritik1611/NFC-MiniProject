@@ -51,12 +51,12 @@
                         <li>
                             <span><img src="location-removebg-preview.png" alt="image"></span>
                             <span>Collector's Colony Chembur<br>
-                                vesit,mumbai<br>40012</span>
+                                VESIT, Mumbai<br>40012</span>
                         </li>
                         
                         <li>
                             <span><img src="mail-removebg-preview.png" alt="img"></span>
-                            <span>2022.yash.sajda@ves.ac.in</span>
+                            <span>2022.abcid@ves.ac.in</span>
                         </li>
                         <li>
                             <span><img src="call-removebg-preview.png" alt="img"></span>
@@ -87,14 +87,6 @@
                             <input type="text" name="email" id="email" required style="font-size: medium;">
                             <span class="upper-text" style="font-size: small;">Email</span>
                         </div>
-                           <!--div class="inputBox w50">
-                            <input type="text" name="mobile_no" id="mobile_no" required style="font-size: medium;">
-                            <span class="upper-text" style="font-size: small;">Mobile Number</span>
-                           </div-->
-                           <!--div class="inputBox w50">
-                            <input type="text" name="organisation" id="organisation" required style="font-size: medium;">
-                            <span class="upper-text" style="font-size: small;">Organisation name</span>
-                           </div-->
                            <div class="inputBox w50">
                                 <span class="upper-text-rating" style="font-size: small;">Rating:</span>
                                 <span class="star" onclick="setRating(1)">&#9733;</span>
@@ -109,7 +101,7 @@
                            <span class="upper-text" style="font-size: small; width: fit-content;">Write Your Review</span>
                            </div>
                             <div class="inputBox w100">
-                                <button type="submit" class="button">Sign Up</button>
+                                <button type="submit" class="button">Send</button>
                             </div>
                         </form>
                     </div>
@@ -142,17 +134,24 @@
 
             function displayReviews() {
                 fetch('display_reviews.php')
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
                     .then(reviews => {
+                        console.log(reviews)
                         const reviewContainer = document.getElementById('review-container');
-                        reviewContainer.innerHTML = ''; // Clear existing reviews
+                        reviewContainer.innerHTML = '';
 
-                        // Limit reviews to 10
                         const limitedReviews = reviews.slice(0, 10);
 
                         limitedReviews.forEach(review => {
                             const cardDiv = document.createElement('div');
                             cardDiv.classList.add('card');
+
+                            cardDiv.style.backgroundColor = '#ffe8b7';
 
                             const reviewName = document.createElement('p');
                             reviewName.classList.add('review-name');
@@ -160,7 +159,7 @@
 
                             const reviewContent = document.createElement('p');
                             reviewContent.classList.add('review-content');
-                            reviewContent.textContent = review.message;
+                            reviewContent.textContent = review.messages;
 
                             const ratingDiv = document.createElement('div');
                             ratingDiv.classList.add('rating');

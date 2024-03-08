@@ -1,7 +1,7 @@
 <?php
 include("review_connection.php");
 
-$sql = "SELECT names, email, message, rating FROM review";
+$sql = "SELECT names, email, messages, rating FROM review";
 $result = $conn->query($sql);
 
 $reviews = array();
@@ -17,4 +17,4 @@ $conn->close();
 header('Content-Type: application/json');
 
 echo json_encode($reviews);
-?>
+
