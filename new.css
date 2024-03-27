@@ -99,7 +99,8 @@
     max-height: auto;
     margin-bottom: 10px;
   }
-  #signature{
+  #signature{ 
+    margin-top: 100px;
     align-items: center;
     max-width: 90%;
     height: auto;

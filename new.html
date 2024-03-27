@@ -193,7 +193,7 @@
 
     .order-button {
       position: absolute;
-      bottom: 40px;
+      bottom: 30px;
       margin-left: 145px;
       background-color: #4CAF50; /* Green */
       border: none;
@@ -274,8 +274,8 @@
         <div class="nfc-card" id="nfcCard">
           <img src="placeholder-logo.png" alt="Logo" id="logo">
           <h2 id="name">Name</h2>
+          <p id="email">Number</p>
           <img src="placeholder-signature.png" alt="Signature" id="signature" style="max-width: 70%; max-height: 100px;">
-          <p id="email">Email</p>
         </div>
       </div>
       <form class="right-side" method="post" action="process_form.php" enctype="multipart/form-data">
@@ -284,16 +284,16 @@
             <input type="text" id="nameInput" name="nameInput" placeholder="Enter Name" required>
         </div>
         <div class="input-group">
-            <label for="emailInput">Email:</label>
-            <input type="email" id="emailInput" name="emailInput" placeholder="Enter Email" style="font-size: 10px;" required>
+            <label for="emailInput">Enter number:</label>
+            <input type="number" id="emailInput" name="emailInput" placeholder="Enter Number" style="font-size: 10px;" required>
         </div>
         <div class="input-group">
             <label for="logoInput">Upload Logo:</label>
             <input type="file" id="logoInput" name="logoInput" accept="image/*" required>
         </div>
         <div class="input-group">
-            <label for="signatureInput">Upload Signature:</label>
-            <input type="file" id="signatureInput" name="signatureInput" accept="image/*" required>
+            <label for="signatureInput">Upload Barcode:</label>
+            <input type="file" id="signatureInput" name="signatureInput" accept="image/*" style="max-width: 70%;" required>
         </div>
         <div class="input-group">
             <label for="backgroundColor">Background Color:</label>
@@ -313,9 +313,9 @@
   </div>
   <script>
     document.getElementById('nameInput').addEventListener('input', updateCard);
-    document.getElementById('emailInput').addEventListener('input', updateCard);
-    document.getElementById('backgroundColor').addEventListener('input', updateCard);
+    document.getElementById('backgroundColor').addEventListener('input', updateCard);    
     document.getElementById('logoInput').addEventListener('change', updateCard);
+    document.getElementById('emailInput').addEventListener('input', updateCard);
     document.getElementById('signatureInput').addEventListener('change', updateSignature);
     document.getElementById('cardType').addEventListener('change', updateCard);
 
