@@ -5,28 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFC Card Store</title>
     <link rel="stylesheet" href="shop.css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    <!--link rel="stylesheet" href="dist/css/style.css"-->
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">NFC Card Store</h1>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Customization</a></li>
-                    <li><a href="#">Contact</a></li>
+    <div class="boxed-container">
+        <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px 5%; background-color: var(--color-primary-dark); white-space: nowrap; height:60px; cursor: pointer;">
+            <div class="logo" style="font-size: 30px; color: #000; font-weight: bold;">NfCafe</div>
+        
+            <nav>
+                <ul style="margin-top:25px; display: flex; align-items: center;">
+                    <li style="list-style: none;">
+                        <a href="land.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Home</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a href="shop.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #00c3ff; transition: all .2s ease;">Shop</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a href="new.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">Customization</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a href="review.html" style="padding: 0 20px; text-decoration: none; font-size: 17px; text-transform: capitalize; color: #000; transition: all .2s ease;">About</a>
+                    </li>
                 </ul>
             </nav>
-        </div>
-    </header>
+        </header>
+    </div>
+
     <main>
         <section class="section">
             <div class="container">
                 <h2>Choose Your NFC Card Type</h2>
                 <div class="card-options">
                     <div class="card-option">
-                        <img src="sta.webp"style="width:50%" alt="Standard NFC Card">
+                        <img src="sta.webp"style="width:100%" alt="Standard NFC Card">
                         <div class="card-details">
                             <h3>Standard NFC Card</h3>
                             <p class="price">$10</p>
