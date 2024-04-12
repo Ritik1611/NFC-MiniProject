@@ -6,7 +6,6 @@
     <title>NFC Card Store</title>
     <link rel="stylesheet" href="shop.css">
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
-    <!--link rel="stylesheet" href="dist/css/style.css"-->
     <link rel="stylesheet" href="index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
@@ -14,6 +13,12 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Animation styles */
+        .selected {
+            border: 2px solid #00c3ff;
+            box-shadow: 0 0 10px rgba(0, 195, 255, 0.5);
         }
     </style>
 </head>
@@ -83,63 +88,61 @@
             <p>&copy; 2024 NFC Card Store</p>
         </div>
     </footer>
-    <script src="script.js">
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
 
-            const target = document.querySelector(this.getAttribute('href'));
-            target.scrollIntoView({
-                behavior: 'smooth'
+                    const target = document.querySelector(this.getAttribute('href'));
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Highlight active navigation item
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                });
             });
 
-            // Highlight active navigation item
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
+            // Toggle mobile navigation menu
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const navLinks = document.querySelector('.nav-links');
+            toggleBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
             });
-            this.classList.add('active');
-        });
-    });
 
-    // Toggle mobile navigation menu
-    const toggleBtn = document.querySelector('.toggle-btn');
-    const navLinks = document.querySelector('.nav-links');
-    toggleBtn.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
+            // Close mobile navigation menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
 
-    // Close mobile navigation menu when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
-            navLinks.classList.remove('active');
-        }
-    });
-
-    // Card selection animation
-    document.querySelectorAll('.card-option').forEach(card => {
-        card.addEventListener('click', function() {
-            // Add selected class to clicked card and remove from others
+            // Card selection animation
             document.querySelectorAll('.card-option').forEach(card => {
-                card.classList.remove('selected');
+                card.addEventListener('click', function() {
+                    // Add selected class to clicked card and remove from others
+                    document.querySelectorAll('.card-option').forEach(card => {
+                        card.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
+                });
             });
-            this.classList.add('selected');
         });
-    });
 
-    // Scroll to customization section
-    const customizationLink = document.querySelector('a[href="#customization-section"]');
-    customizationLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        const customizationSection = document.getElementById('customization-section');
-        customizationSection.scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-
+        // Function to handle buy button click
+        function buyCard(cardType) {
+            // Show confirmation popup
+            if (confirm("Your order will be delivered within 15 days. Proceed with the purchase?")) {
+                window.location.href = "payment_success.html";
+            } else {
+                console.log("Purchase cancelled.");
+            }
+        }
     </script>
 </body>
 </html>
